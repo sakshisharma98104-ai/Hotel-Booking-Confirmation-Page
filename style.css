@@ -1,0 +1,528 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  @font-face {
+    font-family:"dm-mono";
+    src: url("./assets/fonts/dm-mono/DMMono-Medium.ttf");
+  }
+  @font-face {
+    font-family: "dm-sans";
+    src: url("./assets/fonts/dm-sans/DMSans-VariableFont_opsz\,wght.ttf");
+  }
+  @font-face{
+    font-family:"fraunces";
+    src: url("./assets/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+  }
+body{
+    display:flex;
+    min-height:100vh;
+    background-color:hsl(35, 60%, 96%);
+    width:100%;
+    overflow-x:hidden;
+}
+.nav{
+    display:flex;
+    flex-direction:column;
+    position:sticky;
+    top:0;
+    height:100vh;
+    min-width:250px;
+    color:black;
+    padding:5px;
+    border-right:1px solid hsl(36, 22%, 86%);
+    overflow-y:hidden;
+    left:8px;
+}
+.nav_head{
+   display:flex;
+   align-items:center;
+   padding-bottom:10px;
+   justify-content:space-between;
+    border-bottom:1.2px solid hsl(36,22%,86%);
+}
+.crossSym{
+   display:none;
+}
+.menu{
+    position:relative;
+    left:-200px;
+}
+.nav_opt > div:hover{
+    background-color:  hsl(30, 24%, 93%);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.nav_opt{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin:20px 0;
+    font-family:"dm-mono";
+    font-weight:400;
+}
+.nav_opt > div{
+     font-weight:550;
+    cursor:pointer;
+   color:  hsl(32, 20%, 29%);
+   transition:background-color 0.3s ease;
+   align-items:center;
+   border-radius:8px;
+   padding:8px 10px;
+   display:flex;
+   flex-direction:row;
+   gap:12px;
+}
+.nav_opt1{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+}
+.nav_opt2{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+}
+.nav_opt3{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+}
+.nav_opt4{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+}
+.nav_opt4 > img{
+    color:black;
+}
+.nav_opt5{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+}
+hr{
+    position:relative;
+    top:200px;
+}
+.nav_whether{
+    all:unset;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background:linear-gradient(135deg, hsl(42, 83%, 68%));
+    border-radius:8px;
+    line-height:25px;
+    margin:250px 0 30px 0;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+.nav_whether p:first-child{
+    font-family:"dm-mono";
+    font-size:14px;
+    text-transform:uppercase;
+}
+.nav_whether h3{
+    font-family:"fraunces";
+    font-size:32px;
+    margin:4px 0;
+    position:relative;
+    left:0px;
+}
+.nav_whether p:last-child{
+    font-family:12px;
+    opacity:0.85;
+}
+.nav_footer{
+    display:show;
+    text-transform:uppercase;
+    line-height:15px;
+}
+
+
+.main_content{
+    height:100vh;
+    width:100%;
+    background-color:#F8F5EF;
+    padding-left:30px;  
+}
+.main_contentHead{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:100px;
+    line-height:40px;
+    
+}
+.part1 span{
+   text-transform:uppercase;
+   position:relative;
+   top:5px;
+   left:20px;
+}
+.part1 h2{
+     font-size:40px;
+}
+.lucia .red{
+    color:red;
+    font-family:"fraunces";
+    font-weight:400;
+}
+h2 .lucia{
+    font-family:"dm-sans";
+    font-weight:400;
+}
+.lucia h2 , 
+.red{
+     display:inline-block;
+}
+
+.part2{
+   text-align:right;
+   padding-right:50px;
+   position:relative;
+   left:20px;
+}
+.main_contentHead .part2 button:hover{
+    background-color:black;
+    color:white;
+}
+.main_contentHead .button .calender{
+    margin-left:50px;
+}
+.card{
+    all:unset;
+   display:flex;
+   flex:1;
+   flex-direction:row;
+   align-items:center;
+   justify-content: center;
+
+}
+@media(max-width:700px){
+.nav_head .menu{
+        position:relative;
+        right:0px;
+    }
+    #displayNone{
+        display:none;
+    }
+    .main_content{
+        display:flex;
+        flex-direction:column;
+
+    }
+    .card{
+        flex-direction:column;
+        transform:rotate(0deg);
+        margin-left:10px;
+    }
+    .main_content_foot{
+        display:flex;
+        flex-direction:column;
+    }
+}
+.receiptCard{
+    background-color:aquamarine;
+    height:350px;
+    width:310px;
+    border-radius:20px;
+    padding-left:20px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom:30px;
+    background-color: #FFFEFC;
+    transform:rotate(-10deg);
+}
+.receipt_header{
+    display:flex;
+    flex-direction:row;
+    margin-top:20px;
+}
+.headPart1{
+    margin-right:100px;
+    line-height:25px;
+    font-family:"fraunces";
+    font-weight:500;
+}
+.headPart1 h3{
+    font-family:"fraunces";
+    font-weight:400;
+}
+.headPart2{
+    font-size:12px;
+}
+.hrPart1{
+    position:relative;
+    top:7px;
+}
+.receiptPart2{
+    display:flex;
+    flex-direction:row;
+    margin-top:5px;
+    margin-bottom:8px;
+}
+.hrPart2{
+    position:relative;
+    top:0px;
+}
+.receiptPart2 h3{
+    font-size:25px;
+    font-family: "fraunces";
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.receiptPart21{
+    line-height:30px;
+    margin-right:50px;
+}
+.receiptPart22{
+    line-height:30px;
+}
+.receiptPart3{
+    line-height:25px;
+    font-size:17px;
+}
+.receiptPart3 td{
+    padding: 0 17px 0 0;
+}
+.hrPart3{
+    position:relative;
+    top:0;
+}
+.receiptPart4 td{
+    padding:0 30px 0 0 ;
+}
+.receiptPart4 .amount{
+    font-size:35px;
+    line-height: 40px;
+}
+.receiptPart4 .paidWise{
+    padding:0 30px 0 0;
+}
+.noteCard{
+    background-color:rgb(253, 130, 167);
+    height:350px;
+    width:310px;
+    border-radius:20px;
+    padding-left:20px;
+     box-shadow:0 4px 8px rgba(0,0,0,0.2);
+      margin-bottom:30px;
+      background-color: #B64A22;
+      color:white;
+      transform:rotate(10deg);
+}
+.noteCard_header{
+    display:flex;
+    flex-direction:row;
+    margin-top:30px;
+}
+.noteCard_header img{
+    padding-left:100px;
+}
+.noteCard_header p{
+    text-transform: uppercase;
+    font-size:15px;
+    padding-left:10px;
+}
+.noteCardHr{
+ border:2px dotted white;
+ opacity:0.3;
+    position:relative;
+    top:20px;
+    width:260px;
+}
+.noteCard_header .welcome{
+     display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+.noteCard h3{
+    color:#F5D98A;
+   font-family: "fraunces";
+   font-weight:400;
+}
+.noteCard h1{
+    font-family: "fraunces";
+    font-weight:400;
+margin-top:12px;
+margin-bottom:10px;
+}
+.noteCard .room{
+    margin-top:5px;
+}
+.noteCard h1{
+    margin-bottom:5px;
+}
+.statement{
+    display: flex;
+    justify-content: center;
+    margin-bottom:30px;
+}
+.main_content_foot{
+    display:flex;
+    flex-direction:row; 
+    justify-content: center;
+    padding-left:10px;
+}
+.smallCard1{
+    height:230px;
+    width:370px;
+    border-radius:20px;
+    background-color:blue;
+     margin-right:40px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.2);
+      background-color: #FFFEFC;
+      padding-left:20px;
+}
+.smallCard1 .smHead{
+    display:flex;
+    flex-direction:row;
+    align-items:center
+   padding-top:20px;
+    height:40px;
+    justify-content:space-around;
+    font-family:"fraunces";
+    opacity:0.8;
+    font-weight:400;
+    font-size:15px;
+    color:hsl(15, 69%, 37%);
+    align-items:center;
+    text-transform:uppercase;
+}
+.smallCard1 .smHead .arrival{
+   margin-right:80px;
+}
+.smallCard1 .smHead .arrival01{
+    font-size:25px;
+}
+.smallCard1 .smBody .checkIn{
+   font-family:"fraunces";
+    font-weight:400;
+    font-size:30px;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+.smallCard1 .smBody .date{
+    font-size:12px;
+    font-family:"dm-mono";
+    padding-bottom:15px;
+}
+.smallCard1 .smBody .para{
+    font-family:"dm-mono";
+    opacity:0.7;
+    font-size:15px;
+}
+.smallCard2{
+    height:230px;
+    width:370px;
+    border-radius:20px;
+    background-color:rgb(152, 42, 71);
+     margin-right:40px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.2);
+      background-color: #FFFEFC;
+      padding-left:20px;
+
+}
+.smallCard2 .smHead{
+    display:flex;
+    flex-direction:row;
+    font-family:"fraunces";
+    color: hsl(230, 49%, 56%);
+    align-items:Center;
+    justify-content:space-around;
+    padding-top:10px;
+    font-size:15px;
+    padding-bottom:20px;
+}
+.smallCard2 .wifi02{
+    font-size:25px;
+}
+.smallCard2 .wifi{
+    margin-right:90px;
+    text-transform:uppercase;
+}
+.smallCard2 .guest{
+    all:unset;
+    font-family:"fraunces";
+    font-size:25px;
+    font-weight:300;
+    margin-bottom:20px;
+    padding-bottom:20px;    
+}
+.smallCard2 .password{
+    font-family:"dm-mono";
+    font-weight:400;
+    opacity:0.8;
+    font-size:15px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.smallCard2 .btn{
+    display:flex;
+    flex-direction:column;
+    font-size:15px;
+    width:100%;
+  align-items:center;
+  padding-left:0px;
+  height:20px;
+  margin-top:10px;
+}
+.smallCard3{
+     height:230px;
+    width:370px;
+    border-radius:20px;
+    background-color:rgb(42, 152, 117);
+     margin-right:40px;
+     margin-left:10px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.2);
+      background-color: #FFFEFC;
+      padding-left:20px;
+}
+.smallCard3 .smHead{
+    font-family:"fraunces";
+    font-weight:400;
+    font-size:15px;
+    margin-top:10px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-around;
+    color: hsl(340, 48%, 52%);
+    margin-bottom:20px;
+}
+.smallCard3 .served{
+    font-family:"fraunces";
+    font-weight:400;
+    opacity:0.9;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.smallCard3 .terrace{
+    font-family:"dm-mono";
+    font-weight:300;
+    opacity:0.8;
+    font-size:15px;
+    margin-bottom:10px;
+}
+.smallCard3 .break{
+    margin-right:100px;
+    font-size:20px;
+}
+.smallCard3 .break03{
+    font-size:25px;
+}
+.smallCard3 .para{
+    font-family:"dm-mono";
+    font-size:13px;
+    opacity:0.9;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.smallCard3 .smHead{
+    display:flex;
+    flex-direction:row;
+}
+.main_content_footer{
+    background-color:lightcoral;
+    
+}
